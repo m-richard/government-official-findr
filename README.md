@@ -1,24 +1,5 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+![Build Status](https://codeship.com/projects/3690e250-790b-0134-aa23-36f2d7147079/status?branch=master)
+![Code Climate](https://codeclimate.com/github/m-richard/official-finder.png)
+![Coverage Status](https://coveralls.io/repos/github/m-richard/official-finder/badge.png)
