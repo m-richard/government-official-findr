@@ -1,6 +1,6 @@
 class Api::DistrictsController < ApplicationController
   include HTTParty
-  base_uri 'https://www.googleapis.com/civicinfo/v2/representatives/CIVIC_API_KEY'
+  base_uri 'https://www.googleapis.com/civicinfo/v1/representatives?address={@address}&includeOffices=true&levels=subLocality2&levels=subLocality1&levels=locality&levels=regional&roles=schoolBoard&roles=legislatorUpperBody&roles=legislatorLowerBody&roles=judge&fields=offices%2Cofficials&key={CIVIC_API_KEY}'
 
     def address
       @address = Address.new
