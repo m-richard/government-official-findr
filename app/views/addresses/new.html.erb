@@ -1,6 +1,7 @@
 <h1>Enter Your Information Here</h1>
 
 <%= form_for(@address) do |f| %>
+
   <%= f.label :street %>
   <%= f.text_field :street %>
 
@@ -14,6 +15,6 @@
   <%= f.text_field :zip_code %>
 
   <%= f.submit "Submit" %>
-  <% end %>
+<% end %>
 
 <%= flash[:notice] %>
