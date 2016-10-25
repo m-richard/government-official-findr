@@ -1,18 +1,18 @@
 class AddressesController < ApplicationController
+  require 'net/http'
   def index
     @addresses = Address.all
   end
 
   def new
     @address = Address.new
-    # @district = District.find(params[:district_id])
   end
 
   def create
     @address = Address.new(address_params)
-    @district = District.find(params[:district_id])
-    @address.district = @district
-
+    zip_code = params["zip_code"]
+    api_data = Net::HTTP.get_response(URI("http://whoismyrepresentative.com/getall_mems.php?zip=#{zip_code}&output=json"))
+    @district = api_data[results[district]]
     if @address.save
       flash[:notice] = "Address added successfully"
       redirect_to districts_path(@district)
