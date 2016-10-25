@@ -1,3 +1,5 @@
+require 'pry'
+
 class AddressesController < ApplicationController
   require 'net/http'
   def index
@@ -10,10 +12,13 @@ class AddressesController < ApplicationController
 
   def create
     @address = Address.new(address_params)
-    zip_code = params["zip_code"]
+    zip_code = @address.zip_code
     api_data = Net::HTTP.get_response(URI("http://whoismyrepresentative.com/getall_mems.php?zip=#{zip_code}&output=json"))
-    @district = api_data[results[district]]
-    if @address.save
+    result = JSON.parse(api_data.body)
+    @district = result[district]
+    binding.pry
+    if @address.valid?
+      @address.save
       flash[:notice] = "Address added successfully"
       redirect_to districts_path(@district)
     else
