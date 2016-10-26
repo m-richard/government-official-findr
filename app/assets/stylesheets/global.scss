@@ -1,0 +1,50 @@
+$opacity-rgba-var: rgba(0, 0, 0, 0.5);
+
+body {
+  background-image: url(https://upload.wikimedia.org/wikipedia/commons/4/4f/US_Capitol_west_side.JPG);
+  background-size: cover;
+}
+
+li {
+  list-style-type: none;
+  font-family: 'Rubik', sans-serif;
+}
+
+.index {
+  text-align: center;
+  font-size: 4em;
+  font-family: 'Rubik', sans-serif;
+  color: black;
+}
+
+.district-index {
+  text-align: center;
+  font-size: 4em;
+  font-family: 'Rubik', sans-serif;
+}
+
+h1 {
+  text-align: center;
+  font-size: 4em;
+  font-family: 'Rubik', sans-serif;
+}
+
+.zip {
+  text-align: center;
+  height: 2em;
+  font-size: 1em;
+}
+
+.button {
+  text-align: center;
+  font-family: 'Rubik', sans-serif;
+
+}
+
+.new_district {
+  text-align: center;
+}
+
+label {
+  font-size: 1em;
+}
