@@ -16,7 +16,7 @@ class DistrictsController < ApplicationController
     @district = District.new(district_params)
     if @district.save
       flash[:notice] = "District added successfully"
-      redirect_to district_path(@district)
+      redirect_to districts_path(@district)
     else
       flash[:notice] = @district.errors.full_messages.join(", ")
       render :new
@@ -26,6 +26,6 @@ class DistrictsController < ApplicationController
   private
 
   def district_params
-    params.require(:district).permit(:name, :representative)
+    params.require(:district).permit(:zip_code)
   end
 end

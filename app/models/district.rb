@@ -1,6 +1,5 @@
 class District < ActiveRecord::Base
   has_many :addresses
 
-  validates :name, presence: true
-  validates :representative, presence: true
+  validates :zip_code, presence: true, length: { is: 5 }, numericality: true
 end
