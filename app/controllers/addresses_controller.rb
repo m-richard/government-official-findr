@@ -13,10 +13,10 @@ class AddressesController < ApplicationController
   def create
     @address = Address.new(address_params)
     zip_code = @address.zip_code
-    api_data = Net::HTTP.get_response(URI("http://whoismyrepresentative.com/getall_mems.php?zip=#{zip_code}&output=json"))
+    api_data = Net::HTTP.get_response(URI("https://www.googleapis.com/civicinfo/v2/representatives?address=#{@address}&includeOffices=true&levels=subLocality2&levels=subLocality1&roles=legislatorLowerBody&roles=legislatorUpperBody&roles=schoolBoard&fields=offices%2Cofficials&key={AIzaSyAzJV6jWvLWfcufzy3ug2ghJ-uBTX2YsHw}"))
     result = JSON.parse(api_data.body)
     @district = result
-    
+
     if @address.valid?
       @address.save
       flash[:notice] = "Address added successfully"
