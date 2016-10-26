@@ -15,8 +15,8 @@ class AddressesController < ApplicationController
     zip_code = @address.zip_code
     api_data = Net::HTTP.get_response(URI("http://whoismyrepresentative.com/getall_mems.php?zip=#{zip_code}&output=json"))
     result = JSON.parse(api_data.body)
-    @district = result[district]
-    binding.pry
+    @district = result
+    
     if @address.valid?
       @address.save
       flash[:notice] = "Address added successfully"
