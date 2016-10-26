@@ -1,7 +1,6 @@
-<%= form_for(@district) do |f| %>
+<%= form_for(@district) do |f|%>
 
-  <%= f.label :zip_code %>
-  <%= f.text_field :zip_code %>
+  <%= f.text_field :zip_code, class: 'zip' %>
 
-  <%= f.submit "Submit" %>
+  <%= f.submit "Submit", class: 'button' %>
 <% end %>

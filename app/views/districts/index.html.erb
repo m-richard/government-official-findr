@@ -1,3 +1,4 @@
-<% @districts.each do |d| %>
-<%= @districts.zip_code %>
+<h1 class='district index'>Zip Codes</h1>
+<% @districts.each do |district| %>
+<li class='index'><%= link_to "#{district.zip_code}", district %></li>
 <% end %>
