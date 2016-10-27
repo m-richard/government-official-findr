@@ -1,19 +1,24 @@
+require 'pry'
+
 class AddressesController < ApplicationController
+  require 'net/http'
   def index
     @addresses = Address.all
   end
 
   def new
     @address = Address.new
-    # @district = District.find(params[:district_id])
   end
 
   def create
     @address = Address.new(address_params)
-    @district = District.find(params[:district_id])
-    @address.district = @district
+    zip_code = @address.zip_code
+    api_data = Net::HTTP.get_response(URI("https://www.googleapis.com/civicinfo/v2/representatives?address=#{@address}&includeOffices=true&levels=subLocality2&levels=subLocality1&roles=legislatorLowerBody&roles=legislatorUpperBody&roles=schoolBoard&fields=offices%2Cofficials&key={AIzaSyAzJV6jWvLWfcufzy3ug2ghJ-uBTX2YsHw}"))
+    result = JSON.parse(api_data.body)
+    @district = result
 
-    if @address.save
+    if @address.valid?
+      @address.save
       flash[:notice] = "Address added successfully"
       redirect_to districts_path(@district)
     else

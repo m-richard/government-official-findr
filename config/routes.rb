@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
-  root 'addresses#index'
+  root 'districts#new'
 
   resources :districts do
     resources :addresses
   end
+
+  resources :districts
 end
