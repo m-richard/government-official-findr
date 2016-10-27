@@ -1,4 +1,8 @@
+<div class='info'>
 <h1 class='district index'>Zip Codes</h1>
 <% @districts.each do |district| %>
 <li class='index'><%= link_to "#{district.zip_code}", district %></li>
 <% end %>
+<br></br>
+<li class='link'><%= link_to "Enter New Zip Code", new_district_path, class: 'new-zip-link' %>
+</div>
