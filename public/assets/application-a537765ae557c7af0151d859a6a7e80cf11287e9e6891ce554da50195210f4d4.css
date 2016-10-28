@@ -1,0 +1,115 @@
+/* line 3, /Users/marcusrichard/breakable-toy/government-official-findr/app/assets/stylesheets/global.scss */
+body {
+  background-image: url(https://upload.wikimedia.org/wikipedia/commons/4/4f/US_Capitol_west_side.JPG);
+  background-size: cover;
+}
+
+/* line 8, /Users/marcusrichard/breakable-toy/government-official-findr/app/assets/stylesheets/global.scss */
+li {
+  list-style-type: none;
+  font-family: 'Rubik', sans-serif;
+}
+
+/* line 13, /Users/marcusrichard/breakable-toy/government-official-findr/app/assets/stylesheets/global.scss */
+.index {
+  text-align: center;
+  font-size: 4em;
+  font-family: 'Rubik', sans-serif;
+  color: black;
+}
+
+/* line 20, /Users/marcusrichard/breakable-toy/government-official-findr/app/assets/stylesheets/global.scss */
+.district-index {
+  text-align: center;
+  font-size: 4em;
+  font-family: 'Rubik', sans-serif;
+}
+
+/* line 26, /Users/marcusrichard/breakable-toy/government-official-findr/app/assets/stylesheets/global.scss */
+h1 {
+  text-align: center;
+  font-size: 4em;
+  font-family: 'Rubik', sans-serif;
+}
+
+/* line 32, /Users/marcusrichard/breakable-toy/government-official-findr/app/assets/stylesheets/global.scss */
+.zip {
+  text-align: center;
+  height: 2em;
+  font-size: 1em;
+}
+
+/* line 38, /Users/marcusrichard/breakable-toy/government-official-findr/app/assets/stylesheets/global.scss */
+.button {
+  text-align: center;
+  font-family: 'Rubik', sans-serif;
+}
+
+/* line 43, /Users/marcusrichard/breakable-toy/government-official-findr/app/assets/stylesheets/global.scss */
+.new_district {
+  text-align: center;
+}
+
+/* line 47, /Users/marcusrichard/breakable-toy/government-official-findr/app/assets/stylesheets/global.scss */
+label {
+  font-size: 1em;
+}
+
+/* line 51, /Users/marcusrichard/breakable-toy/government-official-findr/app/assets/stylesheets/global.scss */
+a {
+  text-align: center;
+  font-size: 1em;
+}
+
+/* line 56, /Users/marcusrichard/breakable-toy/government-official-findr/app/assets/stylesheets/global.scss */
+.link {
+  text-align: center;
+  font-size: 2em;
+}
+
+/* line 61, /Users/marcusrichard/breakable-toy/government-official-findr/app/assets/stylesheets/global.scss */
+.index-link {
+  text-align: center;
+  font-size: 1em;
+}
+
+/* line 66, /Users/marcusrichard/breakable-toy/government-official-findr/app/assets/stylesheets/global.scss */
+.rep {
+  text-align: center;
+  font-size: 2em;
+  margin-top: 2em;
+}
+
+/* line 72, /Users/marcusrichard/breakable-toy/government-official-findr/app/assets/stylesheets/global.scss */
+.sen1 {
+  text-align: center;
+  font-size: 2em;
+}
+
+/* line 77, /Users/marcusrichard/breakable-toy/government-official-findr/app/assets/stylesheets/global.scss */
+.sen2 {
+  text-align: center;
+  font-size: 2em;
+}
+
+/* line 82, /Users/marcusrichard/breakable-toy/government-official-findr/app/assets/stylesheets/global.scss */
+.info {
+  background-color: white;
+  opacity: 0.7;
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+
+
+ */
+
