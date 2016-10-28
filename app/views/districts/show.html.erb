@@ -3,21 +3,21 @@
 <li><%= "Your Representative in the House is #{@district.rep_name}" %></li>
 <li><%= "Your House district is #{@district.rep_state}-#{@district.rep_district}" %></li>
 <li><%= "Their phone number is #{@district.rep_phone}" %></li>
-<li><%= "You can find more information here: #{@district.rep_link}"%></li>
+<a href=<%= @district.rep_link%>>Click here for more info</a>
 </div>
 <br></br>
 <div class='sen1'>
 <li><%= "One of your Senators is #{@district.sen1_name}" %></li>
 <li><%= "Their seat is the #{@district.sen1_seat}" %></li>
 <li><%= "Their phone number is #{@district.sen1_phone}" %></li>
-<li><%= "You can find more information here: #{@district.sen1_link}" %></li>
+<a href=<%= @district.sen1_link%>>Click here for more info</a>
 </div>
 <br></br>
 <div class='sen2'>
 <li><%= "Your other Senator is #{@district.sen2_name}" %></li>
 <li><%= "Their seat is the #{@district.sen2_seat}" %></li>
 <li><%= "Their phone number is #{@district.sen2_phone}" %></li>
-<li><%= "You can find more information here: #{@district.sen2_link}" %></li>
+<a href=<%= @district.sen2_link%>>Click here for more info</a>
 </div>
 <br></br>
 <li class='link'><%= link_to "Zip Code Index", districts_path %>
