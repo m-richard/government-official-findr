@@ -1,5 +1,3 @@
-require 'pry'
-
 class AddressesController < ApplicationController
   require 'net/http'
   def index
