@@ -23,3 +23,6 @@
 <li class='link'><%= link_to "Zip Code Index", districts_path %>
 <li class='link'><%= link_to "Enter New Zip Code", new_district_path %>
 </div>
+<div class='link'><%= form_for([@district], method: 'delete') do |f| %>
+  <%= f.submit 'Delete Zip', class: 'delete-button' %>
+  <% end %>

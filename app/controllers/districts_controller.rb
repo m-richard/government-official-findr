@@ -45,7 +45,7 @@ class DistrictsController < ApplicationController
 
   def destroy
     District.destroy(params[:id])
-    redirect_to new_district_path
+    redirect_to districts_path
   end
 
   private
