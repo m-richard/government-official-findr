@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161027182457) do
+ActiveRecord::Schema.define(version: 20161224202912) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -26,7 +26,7 @@ ActiveRecord::Schema.define(version: 20161027182457) do
     t.index ["district_id"], name: "index_addresses_on_district_id", using: :btree
   end
 
-  create_table "districts", force: :cascade do |t|
+  create_table "states", force: :cascade do |t|
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
     t.string   "zip_code",     null: false
