@@ -1,30 +1,30 @@
-class DistrictsController < ApplicationController
+class StatesController < ApplicationController
   def index
-    @districts = District.all
+    @states = State.all
   end
 
   def new
-    @district = District.new
+    @state = State.new
   end
 
   def show
-    @district = District.find(params[:id])
-    zip_code = @district.zip_code
+    @state = State.find(params[:id])
+    zip_code = @state.zip_code
     api_data = Net::HTTP.get_response(URI("http://whoismyrepresentative.com/getall_mems.php?zip=#{zip_code}&output=json"))
     result = JSON.parse(api_data.body)
-    @district.rep_name = result['results'][0]['name']
-    @district.rep_district = result['results'][0]['district']
-    @district.rep_phone = result['results'][0]['phone']
-    @district.rep_link = result['results'][0]['link']
-    @district.rep_state = result['results'][0]['state']
-    @district.sen1_name = result['results'][1]['name']
-    @district.sen1_seat = result['results'][1]['district']
-    @district.sen1_phone = result['results'][1]['phone']
-    @district.sen1_link = result['results'][1]['link']
-    @district.sen2_name = result['results'][2]['name']
-    @district.sen2_seat = result['results'][2]['district']
-    @district.sen2_phone = result['results'][2]['phone']
-    @district.sen2_link = result['results'][2]['link']
+    @state.rep_name = result['results'][0]['name']
+    @state.rep_state = result['results'][0]['district']
+    @state.rep_phone = result['results'][0]['phone']
+    @state.rep_link = result['results'][0]['link']
+    @state.rep_state = result['results'][0]['state']
+    @state.sen1_name = result['results'][1]['name']
+    @state.sen1_seat = result['results'][1]['district']
+    @state.sen1_phone = result['results'][1]['phone']
+    @state.sen1_link = result['results'][1]['link']
+    @state.sen2_name = result['results'][2]['name']
+    @state.sen2_seat = result['results'][2]['district']
+    @state.sen2_phone = result['results'][2]['phone']
+    @state.sen2_link = result['results'][2]['link']
   end
 
   def create

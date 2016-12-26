@@ -1,4 +1,4 @@
-class District < ActiveRecord::Base
+class State < ActiveRecord::Base
   has_many :addresses
   attr_accessor :rep, :sen1, :sen2
 
