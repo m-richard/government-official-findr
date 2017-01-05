@@ -29,28 +29,28 @@ class StatesController < ApplicationController
 
   def create
     zip_code = params[:district][:zip_code]
-    @district = District.new(district_params)
+    @state = State.new(district_params)
     api_data = Net::HTTP.get_response(URI("http://whoismyrepresentative.com/getall_mems.php?zip=#{zip_code}&output=json"))
     result = JSON.parse(api_data.body)
-    @district.rep = result['results'][0]
-    @district.sen1 = result['results'][1]
-    @district.sen2 = result['results'][2]
-    if @district.save
-      redirect_to district_path(@district)
+    @state.rep = result['results'][0]
+    @state.sen1 = result['results'][1]
+    @state.sen2 = result['results'][2]
+    if @state.save
+      redirect_to state_path(@state)
     else
-      flash[:notice] = @district.errors.full_messages.join(", ")
+      flash[:notice] = @state.errors.full_messages.join(", ")
       render :create
     end
   end
 
   def destroy
-    District.destroy(params[:id])
-    redirect_to districts_path
+    State.destroy(params[:id])
+    redirect_to states_path
   end
 
   private
 
-  def district_params
-    params.require(:district).permit(:zip_code)
+  def state_params
+    params.require(:state).permit(:zip_code)
   end
 end
