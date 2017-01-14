@@ -37,6 +37,8 @@ class StatesController < ApplicationController
     @state.sen2 = result['results'][2]
     if @state.save
       redirect_to state_path(@state)
+    elsif @state.empty?
+      redirect_to root_path
     else
       flash[:notice] = @state.errors.full_messages.join(", ")
       render :create
